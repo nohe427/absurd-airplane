@@ -8,8 +8,8 @@ function getHeaderHost() {
   return hostname;
 }
 
-function isHome(): bool {
-  if (getHeaderHost == "nohe-example") {
+function isHome() {
+  if (getHeaderHost() == "nohe-example") {
     return true
   }
   return false
