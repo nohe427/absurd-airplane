@@ -15,11 +15,26 @@ function isHome() {
   return false
 }
 
+function isEs() {
+  if (getHeaderHost() == "es") {
+    return true
+  }
+  return false
+}
+
 export default function Home() {
   if (isHome()) {
   return (
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-       Welcome to my wonderful site. We are no longer accepting new signups!
+       Welcome!
+      </main>
+    )
+  }
+
+  if (isEs()) {
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    ¡Bienvenida!
       </main>
     )
   }
